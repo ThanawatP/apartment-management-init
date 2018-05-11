@@ -8,3 +8,4 @@ done
 
 >&2 echo "Mongodb is up - executing command"
 sh ./run.sh
+sh ./call_generate_example_api.sh

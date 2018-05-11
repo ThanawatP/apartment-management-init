@@ -1,0 +1,1 @@
+curl -X POST "http://${API_HOST}:${API_PORT}/rental/example"

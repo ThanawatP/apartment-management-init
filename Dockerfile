@@ -11,6 +11,7 @@ RUN echo "deb http://repo.mongodb.org/apt/debian jessie/mongodb-org/3.6 main" | 
 RUN apt-get update \
   && apt-get install -y \
     mongodb-org-shell \
+    curl \
   && rm -rf /var/lib/apt/lists/*
 
 # Workdir
@@ -28,6 +29,8 @@ RUN chmod +x /app/seeds/*.sh
 ENV MONGO_HOST mongo
 ENV MONGO_PORT 27017
 ENV DATABASE_NAME apartment_management
+ENV API_HOST api
+ENV API_PORT 3001
 
 # Command
 CMD ./wait-for-mongo.sh
